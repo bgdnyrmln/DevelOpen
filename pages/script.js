@@ -92,3 +92,23 @@ document.getElementById("modal1").addEventListener("click", function () {
   document.getElementById("modal1").style.display = "none"; // Close the modal
   enableScrolling(); // Enable scrolling
 });
+
+document.getElementById("modal-button2").addEventListener("click", function () {
+  document.getElementById("modal2").style.display = "block"; // Open the modal
+  disableScrolling(); // Disable scrolling
+});
+
+document.getElementById("modal2").addEventListener("click", function () {
+  document.getElementById("modal2").style.display = "none"; // Close the modal
+  enableScrolling(); // Enable scrolling
+});
+
+document.getElementById("modal-button3").addEventListener("click", function () {
+  document.getElementById("modal3").style.display = "block"; // Open the modal
+  disableScrolling(); // Disable scrolling
+});
+
+document.getElementById("modal3").addEventListener("click", function () {
+  document.getElementById("modal3").style.display = "none"; // Close the modal
+  enableScrolling(); // Enable scrolling
+});

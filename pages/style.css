@@ -2,6 +2,7 @@ body{
     margin: 0;
     background-color: black;
     transition: background-color 0.5s, color 0.5s;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /* Light theme styles */
@@ -10,33 +11,6 @@ body.light-theme {
     color: black;
 }
 
-
-
-.button.light-theme {
-    background-color: black;
-    color: white;
-}
-
-.card.light-theme {
-    background-color: #f0f0f0;
-}
-
-.card-title.light-theme {
-    color: #000;
-}
-
-.card-desc.light-theme {
-    color: #444;
-}
-
-.card-button.light-theme {
-    background-color: #444;
-    color: white;
-}
-
-.card-button.light-theme:hover {
-    background-color: black;
-}
 
 
 
@@ -80,7 +54,6 @@ html:has(body:has(:not(.header-line))) .header-line {
     color: white;
     font-weight: 700;
     font-size: 14px;
-    font-family: 'Open Sans', sans-serif;
     margin-right: 25px;
     text-decoration: none;
     transition: color 0.1s linear;
@@ -95,7 +68,6 @@ html:has(body:has(:not(.header-line))) .header-line {
     color: white;
     font-weight: 700;
     font-size: 14px;
-    font-family: 'Open Sans', sans-serif;
     margin-right: 25px;
     text-decoration: none;
     transition: color 0.1s linear;
@@ -115,7 +87,6 @@ html:has(body:has(:not(.header-line))) .header-line {
     color: white;
     text-decoration: none;
     font-weight: 700;
-    font-family: 'Open Sans', sans-serif;
     transition: color 0.1s linear;
 }
 
@@ -127,7 +98,6 @@ html:has(body:has(:not(.header-line))) .header-line {
     color: white;
     font-weight: 700;
     font-size: 9px;
-    font-family: 'Open Sans', sans-serif;
     margin-right: 25px;
     text-decoration: none;
     transition: color 0.1s linear;
@@ -141,11 +111,10 @@ html:has(body:has(:not(.header-line))) .header-line {
     color: black;
     font-weight: 700;
     font-size: 14px;
-    font-family: 'Open Sans', sans-serif;
     margin-right: 25px;
     text-decoration: none;
     transition: background-color 0.1s linear;
-    width: 12.2vh;
+    width: 13.6vh;
 }
 
 .button-title{
@@ -155,7 +124,6 @@ html:has(body:has(:not(.header-line))) .header-line {
     color: black;
     font-weight: 700;
     font-size: 14px;
-    font-family: 'Open Sans', sans-serif;
     margin-right: 2vh;
     text-decoration: none;
     transition: background-color 0.1s linear;
@@ -167,8 +135,8 @@ html:has(body:has(:not(.header-line))) .header-line {
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
+    width: 13.6vh;
     margin-top: 0vh;
-    display: none;
     position: absolute;
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
@@ -176,12 +144,16 @@ html:has(body:has(:not(.header-line))) .header-line {
     color: black;
     font-weight: 700;
     font-size: 14px;
-    font-family: 'Open Sans', sans-serif;
     margin-right: 25px;
     text-decoration: none;
-    transition: background-color 0.1s linear;
-
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s linear;
+    display: block;
+    height: 0;
   }
+
+
   
   /* Links inside the dropdown */
 .dropdown-content a {
@@ -198,12 +170,10 @@ html:has(body:has(:not(.header-line))) .header-line {
   
   /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
-    display: block;
-}
-  
-  /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-    background-color: #3e8e41;
+    height: 18vh;
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .header-down{
@@ -214,7 +184,6 @@ html:has(body:has(:not(.header-line))) .header-line {
 .header-title{
     margin-top: 50vh;
     position: absolute;
-    font-family: 'Open Sans', sans-serif;
     color: white;
     font-weight: 400;
     font-size: 7vh;
@@ -365,7 +334,6 @@ html:has(body:has(:not(.header-line))) .header-line {
     color: black;
     font-weight: 700;
     font-size: 14px;
-    font-family: 'Open Sans', sans-serif;
     margin-right: 25px;
     text-decoration: none;
     transition: background-color 0.1s linear;
@@ -398,6 +366,9 @@ html:has(body:has(:not(.header-line))) .header-line {
 }
 
 .modal-content{
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
     background-color: #fefefe;
     margin: 15% auto;
     padding: 20px;
@@ -411,10 +382,16 @@ html:has(body:has(:not(.header-line))) .header-line {
 }
 
 .modal-header{
-    font-family: 'Open Sans', sans-serif;
     color: rgb(0, 0, 0);
     font-weight: 400;
     font-size: 7vh;
+    text-align: center;
+}
+
+.modal-text{
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+    font-size: 3vh;
     text-align: center;
 }
 
@@ -431,7 +408,6 @@ html:has(body:has(:not(.header-line))) .header-line {
 
 
 .about-title{
-    font-family: 'Open Sans', sans-serif;
     color: white;
     font-weight: 400;
     font-size: 50px;
@@ -439,7 +415,6 @@ html:has(body:has(:not(.header-line))) .header-line {
 }
 
 .about-text{
-    font-family: 'Open Sans', sans-serif;
     color: white;
     font-weight: 400;
     font-size: 20px;
