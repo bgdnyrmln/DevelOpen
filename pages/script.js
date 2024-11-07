@@ -22,7 +22,28 @@
   });
   
 
+  
+
+
+
   document.addEventListener('DOMContentLoaded', () => {
+
+    // adding header 
+    fetch("header.html")
+    .then(response => {
+      return response.text();
+    })
+    .then(data => {
+      document.querySelector("header").innerHTML = data;
+    })
+    // error catch
+    .catch(error => { 
+      console.error('Error:', error);
+    });
+    
+
+
+
     const themeToggleButton = document.getElementById('theme-toggle');
     const bodyElement = document.body;
     // Function to toggle between light and dark themes
@@ -35,17 +56,8 @@
             themeToggleButton.textContent = 'freak my eyes pls';
         }
     });
-});
-
-
-document.getElementById("logo").addEventListener("click", function () {
-  if(window.innerWidth <= 815) {  // works only for mobile version
-    document.getElementById("side-menu").style.width = "250px"; // Open the side menu
-  }
-  else {
-    document.getElementById("logo").href = "main.html";
-  }
-});
+    
+  });
 
 document.getElementById("close-btn").addEventListener("click", function () {
   document.getElementById("side-menu").style.width = "0"; // Close the side menu
